@@ -1,8 +1,14 @@
 //xCreateCustomTest.js: Functional Logic.
 
-define([], function() {
+define([
+	"validate",
+	"etc/Data"
+], function(
+	validate,
+	Data
+) {
   return function( Input ) {
-	//Validate Input
+	validate(Data( Input ));
 	
 	//Return custom test.	
 	return function() {
